@@ -7,7 +7,7 @@ const Body = () => {
 	const [data, setData] = useState([]);
 
 	useEffect(() => {
-		fetch("data.js")
+		fetch("dataTwo.js")
 			.then((res) => res.json())
 			.then((data) => setData(data));
 	}, []);
@@ -68,13 +68,14 @@ const Body = () => {
 				</div>
 				<div className="d-flex justify-content-center align-items-center pb-5 px-3 gap-2 flex-wrap ">
 					<div className="number-card">Material = Plastic</div>
-					<div className="number-card">Area = 0.01</div>
+					<div className="number-card">Mass = 100 g</div>
+					<div className="number-card">s = 0.90</div>
 					<div className="number-card">
-						Thermal Conductivity = 0.3
+						Thermal Conductivity = 0.4
 					</div>
-					<div className="number-card">Thickness = 0.0001</div>
+					<div className="number-card">Thickness = 0.00165</div>
 					<div className="number-card">
-						Number of Experiment = 30 times
+						Number of Experiment = 50 times
 					</div>
 				</div>
 
@@ -87,7 +88,7 @@ const Body = () => {
 								<th scope="col">Time</th>
 								<th scope="col">Initial Temperature</th>
 								<th scope="col">Final Temperature</th>
-								<th scope="col">Heat Flow (Q)</th>
+								{/* <th scope="col">Heat Flow (Q)</th> */}
 							</tr>
 						</thead>
 						{/* <tbody>
@@ -111,6 +112,125 @@ const Body = () => {
 						</tbody>
 					</table>
 				</div>
+				{/* ************************************************************************* */}
+				<div className="my-5 bg-white">
+					<hr className="py-3" />
+				</div>
+				{/* ************************************************************************* */}
+				<div className="explanation py-5 px-3">
+					<div>
+						<div className="display-6 pb-4">
+							Mathematical Explanation
+						</div>
+						<hr />
+						<div className="fs-5 text-justify">
+							<p>
+								The code conducts a series of experiments to
+								analyze how the temperature of a material
+								changes over time. It utilizes a mathematical
+								model to compute the final temperature (θ2) of
+								the material. Each experiment involves selecting
+								a random temperature difference (dθ) between 4
+								and 6, representing variations in temperature
+								within the material. Constants m, s, d, and k
+								characterize properties of the material and its
+								environment, including mass, specific heat,
+								thickness, and thermal conductivity,
+								respectively.
+							</p>
+							<p>
+								Across 30 experiments, the code iteratively
+								increments time (t) by 0.5 units. For each
+								experiment, the final temperature (θ2) is
+								calculated using the provided equation. The
+								initial temperature for subsequent experiments
+								is derived from the final temperature of the
+								previous experiment. These simulations
+								facilitate an understanding of how the material
+								responds to different conditions and the
+								influence of diverse factors on its thermal
+								behavior.
+							</p>
+						</div>
+					</div>
+					<div>
+						<div className="display-6 pb-4">
+							Functional Explanation
+						</div>
+						<hr />
+						<div className="fs-5 text-justify">
+							<ul>
+								<li>
+									<div className="pb-3">
+										<strong>calculating θ2</strong>
+									</div>
+									<div className="pb-3">
+										<ul>
+											<li>
+												This function calculates the
+												final temperature (θ2) of the
+												material based on the provided
+												equation.
+											</li>
+											<li>
+												It takes parameters such as
+												temperature difference (dθ),
+												mass (m), specific heat (s),
+												thickness (d), thermal
+												conductivity (k), and time (t).
+											</li>
+											<li>
+												Using these parameters, it
+												calculates the final temperature
+												(θ2) of the material and returns
+												the result.
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li>
+									<div className="pb-3">
+										<strong>runExperiment():</strong>
+									</div>
+									<ul>
+										<li>
+											This function conducts a series of
+											experiments to simulate the behavior
+											of the material over time.
+										</li>
+										<li>
+											It initializes an array to store the
+											experiment results.
+										</li>
+										<li>
+											It iterates through 50 experiments,
+											incrementing the time by 0.5 in each
+											iteration.
+										</li>
+										<li>
+											For each experiment, it calculates
+											the final temperature of the
+											material using the previously
+											mentioned function.
+										</li>
+										<li>
+											It stores the experiment data,
+											including the experiment ID, time,
+											initial temperature, and final
+											temperature, in the array.
+										</li>
+										<li>
+											After completing all experiments, it
+											returns the array containing the
+											experiment results.
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				{/* ************************************************************************* */}
 				{/* ************************************************************************* */}
 				<div>
 					<DataChart></DataChart>

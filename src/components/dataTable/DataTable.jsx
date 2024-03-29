@@ -8,7 +8,7 @@ const DataTable = ({ data }) => {
 			<td>{data?.time}</td>
 			<td>{data?.initialTemp.toFixed(2)}</td>
 			<td>{data?.finalTemp.toFixed(2)}</td>
-			<td>{data?.heatFlow.toFixed(2)}</td>
+			{/* <td>{data?.heatFlow.toFixed(2)}</td> */}
 		</tr>
 	);
 };
