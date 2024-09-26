@@ -1,0 +1,47 @@
+.exp {
+	max-width: 1200px;
+	margin: 0 auto !important;
+	padding: 40px 10px;
+}
+
+.read-more {
+	border: 2px solid #292929;
+	cursor: pointer;
+	padding: 5px 50px;
+	margin-top: 10px;
+	width: fit-content;
+	transition: 0.2s ease-in-out;
+}
+.read-more > a {
+	color: #292929 !important;
+}
+
+.text-justify {
+	text-align: justify !important;
+}
+
+.banner {
+	min-height: 100vh;
+}
+
+.experiment {
+	background-color: #292929;
+	color: white;
+}
+
+.number-card {
+	border: 2px solid white;
+	padding: 3px 16px;
+}
+
+.custom-table {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 10px;
+	overflow-x: auto;
+}
+
+.explanation {
+	max-width: 1200px;
+	margin: 0 auto;
+}
